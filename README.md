@@ -31,37 +31,31 @@ Also, you can get the merged data [here](https://www.kaggle.com/keerthanamanohar
 
 ## Summary of Findings
 
-In the exploration, I found that there was a strong relationship between the
-price of a diamond and its carat weight, with modifying effects from the cut,
-color, and clarity grades given to the diamond. The relationship is
-approximately linear between price and carat when price is transformed to be on
-a logarithmic scale and carat transformed to be on a cube-root scale. I found a
-somewhat surprising result initially when the marginal trend for the cut, color,
-and clarity variables indicated that higher diamond quality was associated with
-lower price. However, higher diamond quality was also associated with smaller
-diamonds. When I isolated diamonds of a single carat weight, there was a clear
-positive relationship between higher diamond quality and higher diamond price.
+In the exploration, I found that there are many factors of users and trips influencing the trip frequency and trip duration.
 
-Outside of the main variables of interest, I verified the relationship between
-diamond carat weight and its x, y, and z dimensions. For the dataset given,
-there was an interesting interaction in the categorical diamond quality
-features. The lower clarity grades looked like they had slightly better
-distribution of cut and color grades than diamonds with the higher clarity
-grades.
+**Factors affecting Trip Frequency,**
+> **User Features** : Subscribers have contributed in more frequent trips than Customers, among which Male has the highest number of trip counts compared to other gender types. Users aged between 25-50 has the frequent and low duration trips.
 
+> **Trip Features** : The hour of the day and Day of the week has an impact on trip frequency, where **Weekdays** being the highest trip holders with peak hours of **8am-9am** and **5pm-6pm**
+
+> **User & Trip** : In **Busy hours (8am & 5pm)**, frequency of **Subscriber** trips is higher than **Customer** trips during morning, while in the evening frequency of **Customer** trips is almost equal to **Subscriber** trips in **Week Days**. The frequency of trips in **Week ends** is higher for **Customer** rather than **Subscriber** during day time (10am-5pm)
+
+**Factors affecting Trip Duration,**
+> **User Features** : Customers have contributed in more high duration trips than Subscribers, among which users without personal information registered has the highest trip duration, followed by Female compared to other gender types. Users aged above 100 has the high duration trips.
+
+> **Trip Features** : The hour of the day and Day of the week has an impact on trip duration, where **Weekends** being the high duration trips holders with peak hours of **1am-3am** and **9am-5pm**
+
+> **User & Trip** : Early morning around **1am-4am**, user aged **60** goes for **high duration trips**. While, few elder users aged above **100** go for higher duration trips during **day time (5am-5pm)**. For both Customer and Subscriber, weekends have the higher trip duration, among which Customer has the highest.
+
+The Busiest Route is from **San Francisco Ferry Building (Harry Bridges Plaza)** (ID:15) to **The Embarcadero at Sansome St** (ID:6) with trip count of **7585**
 
 ## Key Insights for Presentation
 
-For the presentation, I focus on just the influence of the four Cs of diamonds
-and leave out most of the intermediate derivations. I start by introducing the
-price variable, followed by the pattern in carat distribution, then plot the
-transformed scatterplot.
+For the presentation, I focus on the influence of the **User & Trip** features on **Trip frequency & duration**. I start by introducing the distribution of trip duration (log scale) with respect to trip frequency. Then, I continue by plotting the distributions of trip features, Hour of the Day and Day of the Week. And also user features, gender and user type.
 
-Afterwards, I introduce each of the categorical variables one by one. To start,
-I use the violin plots of price and carat across clarity. I'm only looking at
-the clarity grade plot here since it's the clearest example of how the
-categorical quality grades affect diamond pricing. The other two categorical
-variables, cut and color, are covered afterwards, using point plots. I've made
-sure to use different color palettes for each quality variable to make sure it
-is clear that they're different between plots.
+Following, I plot the relationship between trip duration, trip frequency and Age using heat map. Then, I continue plotting the hourly frequency for each day of the week for users having the highest trip counts in the previous graph.
+
+Afterwards, I planned to plot the average trip duration for gender and user type. Then, I plot the relationship between day of the week and user type associated with trip duration. I plot the User's age contribution in trip duration for each hour.
+
+At last, I plot the busiest 20 routes.
 
